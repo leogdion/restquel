@@ -1,6 +1,6 @@
 {
   "name": "restqel",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "sql to rest http server",
   "main": "index.js",
   "scripts": {
@@ -29,6 +29,11 @@
     "gulp-mocha": "^0.4.1",
     "chai": "^1.9.1",
     "gulp-istanbul": "^0.1.1",
-    "gulp-istanbul-enforcer": "^1.0.2"
+    "gulp-istanbul-enforcer": "^1.0.2",
+    "gulp-coveralls": "^0.1.2"
+  },
+  "dependencies": {
+    "coveralls": "^2.10.0",
+    "mocha-lcov-reporter": "0.0.1"
   }
 }

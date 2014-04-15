@@ -4,13 +4,23 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     beautify = require('gulp-beautify'),
     istanbul = require("gulp-istanbul"),
-    coverageEnforcer = require("gulp-istanbul-enforcer");
+    coveralls = require('gulp-coveralls');
+coverageEnforcer = require("gulp-istanbul-enforcer");
 
-gulp.task('default', ['beautify', 'lint', 'test', 'enforce-coverage', 'bump']);
+gulp.task('default', ['beautify', 'lint', 'test', 'enforce-coverage', 'coveralls', 'bump']);
+
+gulp.task('coveralls', ['enforce-coverage'], function () {
+  gulp.src('coverage/**/lcov.info').pipe(coveralls());
+});
 
 gulp.task('enforce-coverage', ['test'], function () {
   var options = {
-    thresholds: thresholds[key],
+    thresholds: {
+      statements: 95,
+      branches: 95,
+      functions: 95,
+      lines: 95
+    },
     coverageDirectory: 'coverage',
     rootDirectory: ''
   };
