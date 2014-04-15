@@ -1,6 +1,6 @@
 {
   "name": "restqel",
-  "version": "0.1.1",
+  "version": "0.0.3",
   "description": "sql to rest http server",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/leogdion/restqel.git"
+    "url": "https://github.com/leogdion/restquel.git"
   },
   "keywords": [
     "rest",
@@ -18,7 +18,7 @@
   "author": "Leo G Dion",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/leogdion/restqel/issues"
+    "url": "https://github.com/leogdion/restquel/issues"
   },
   "homepage": "https://github.com/leogdion/restqel",
   "devDependencies": {
