@@ -1,6 +1,6 @@
 {
   "name": "restqel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "sql to rest http server",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,13 @@
   },
   "homepage": "https://github.com/leogdion/restqel",
   "devDependencies": {
-    "gulp": "^3.6.0"
+    "gulp": "^3.6.0",
+    "gulp-bump": "^0.1.7",
+    "gulp-jshint": "^1.5.3",
+    "gulp-beautify": "^1.0.3",
+    "gulp-mocha": "^0.4.1",
+    "chai": "^1.9.1",
+    "gulp-istanbul": "^0.1.1",
+    "gulp-istanbul-enforcer": "^1.0.2"
   }
 }
