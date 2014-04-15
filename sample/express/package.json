@@ -1,0 +1,7 @@
+{
+  "name": "restquel-express-sample",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.0.0"
+  }
+}
