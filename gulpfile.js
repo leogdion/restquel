@@ -42,11 +42,11 @@ gulp.task('bump', function () {
 });
 
 gulp.task('lint', function () {
-  gulp.src(['./lib/**/*.js', './test/**/*.js', './gulpfile.js']).pipe(jshint()).pipe(jshint.reporter('default'));
+  gulp.src(['./lib/**/*.js', './test/**/*.js', './gulpfile.js', 'sample/**/*.js', '!sample/**/node_modules/**/*.js']).pipe(jshint()).pipe(jshint.reporter('default'));
 });
 
 gulp.task('beautify', function () {
-  gulp.src(['./lib/**/*.js', './test/**/*.js', './gulpfile.js'], {
+  gulp.src(['./lib/**/*.js', './test/**/*.js', './gulpfile.js', 'sample/**/*.js', '!sample/**/node_modules/**/*.js', 'sample/**/*.json'], {
     base: '.'
   }).pipe(beautify({
     indentSize: 2,
