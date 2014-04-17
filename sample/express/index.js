@@ -1,9 +1,8 @@
 var express = require('express'),
     restquel = require('../../index.js');
 var app = express();
+var rql = restquel(__dirname + "/../configuration.json");
 
-app.use(restquel(__dirname + "/../configuration.json"));
-//app.get('/', function(req, res){
-//  res.send('hello world');
-//});
-app.listen(8080);
+app.use(rql);
+
+rql.ready(app, 8080);

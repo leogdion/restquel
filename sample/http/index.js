@@ -1,4 +1,7 @@
 var http = require('http'),
     restquel = require('../../index.js');
 
-http.createServer(restquel(__dirname + "/../configuration.json")).listen(8080);
+var rql = restquel(__dirname + "/../configuration.json");
+var server = http.createServer(rql);
+
+rql.ready(server, 8080);
