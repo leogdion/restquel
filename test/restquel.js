@@ -1,4 +1,4 @@
-var restquel = require("../lib/restquel.js");
+var restquel = require(__dirname + "/../lib/restquel.js");
 var chai = require('chai');
 chai.should();
 
