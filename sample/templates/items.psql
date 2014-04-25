@@ -1,0 +1,8 @@
+WITH r AS (
+  SELECT * from ap.item_types
+)
+SELECT item_names.name, (CASE count(r.*) when 0 then json_agg(item_names.*) else json_agg(r.*) end) as types
+from ap.item_names
+left join r on item_names.code = r.code
+group by item_names.name
+order by item_names.name

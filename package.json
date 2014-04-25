@@ -1,6 +1,6 @@
 {
   "name": "restqel",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "description": "sql to rest http server",
   "main": "index.js",
   "scripts": {
@@ -36,6 +36,7 @@
   "dependencies": {
     "coveralls": "^2.10.0",
     "mocha-lcov-reporter": "0.0.1",
-    "pg.js": "^3.0.4"
+    "pg.js": "^3.0.4",
+    "string": "^1.8.1"
   }
 }
