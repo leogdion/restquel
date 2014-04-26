@@ -24,8 +24,8 @@ var config = {
 };
 describe('querycollection', function () {
 
-  it('should return a function', function (done) {
-    querycollection(config)("items", {
+  it('should return an array', function (done) {
+    querycollection(config).items({
       "area": "foo"
     }, function (err, results) {
 
