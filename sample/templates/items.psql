@@ -1,8 +1,13 @@
 WITH r AS (
-  SELECT * from ap.item_types
+  SELECT item_types.code,item_types.name from ap.item_types
+  inner join ap.series on item_types.code = series.itemcode 
+  where series.areacode = {{area}} or {{area}} is null and item_types.code is not null
+  group by item_types.code,item_types.name
 )
-SELECT item_names.name, (CASE count(r.*) when 0 then json_agg(item_names.*) else json_agg(r.*) end) as types
+SELECT item_grouping.groupname,  item_names.name, CASE count(r.*) when 0 then json_agg(item_names.*) else json_agg(r.*) end
+as types
 from ap.item_names
 left join r on item_names.code = r.code
-group by item_names.name
-order by item_names.name
+left join ap.item_grouping on item_names.code = item_grouping.code
+group by item_names.name, item_grouping.groupname
+order by item_grouping.groupname, item_names.name

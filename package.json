@@ -1,6 +1,6 @@
 {
   "name": "restqel",
-  "version": "0.0.43",
+  "version": "0.0.51",
   "description": "sql to rest http server",
   "main": "index.js",
   "scripts": {
